@@ -250,3 +250,15 @@ footer p {
   display: block;
   color: green;
 }
+
+div.form-group.col-md-5 {
+  margin-right: 400px;
+}
+
+div.form-group.col-md-9 {
+margin-right: 200px;
+}
+
+#contact button.btn.btn-primary {
+  margin: 10px 0 25px 15px;
+}
