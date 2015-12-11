@@ -188,3 +188,65 @@ footer p {
   right: 5px;
   bottom: 5px;
 }
+
+/* * * * * * contact.html * * * * */
+
+#contact_frame {
+  overflow: hidden;
+}
+
+#contact {
+  width: 700px;
+  float: left;
+}
+#contact h3 {
+  background: #08881c;
+  text-align: center;
+  color: white;
+  height: 50px;
+  margin: 5px 0 0 0;
+  padding: 10px 0 10px 10px;
+}
+
+#sidebar{
+  margin: 5px 0 0 0;
+  float: right;
+  width: 170px;
+}
+#sidebar h4{
+  width: 170px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: 5px 0 5px 0;
+  background: #08881c;
+  color: white;
+}
+
+#sidebar ul {
+  width: 170px;
+  margin: 5px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#sidebar ul > li{
+  width: 170px;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 5px;
+}
+
+#sidebar ul > li:hover {
+  background: #dfdbdb;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+#sidebar ul > li > a{
+  text-align: left;
+  padding-left: 55px;
+  width: 170px;
+  text-decoration: none;
+  display: block;
+  color: green;
+}
