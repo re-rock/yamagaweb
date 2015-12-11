@@ -1,0 +1,190 @@
+/* mycss.css for gitHub*/
+
+body {
+  /*height: 100%;*/
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+}
+
+/*body > #container {
+height: auto;
+}*/
+
+#container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 5px;
+  /* boxに影をつける　水平　垂直　ぼかし　広がり　色指定*/
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+
+}
+
+header {
+  height: 60px;
+  color: white;
+  padding-left: 50px;
+  /*ストライプ*/
+  -webkit-background-size: 7px 7px;
+  -moz-background-size: 7px 7px;
+  background-size: 7px 7px;
+  background-color: #0a6b19;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(#08881c 50%, transparent 50%, transparent);
+  background-image: linear-gradient(#08881c 50%, transparent 50%, transparent);
+}
+
+header img {
+  margin: 3px 0 0 5px;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 0 0 0 3px;
+  padding: 0;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+header h1 > p{
+  display: inline-block;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 10px 0 0 5px;
+}
+
+header h1 > img {
+  overflow: hidden;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+header ul {
+  float: right;
+  list-style-type: none;
+
+}
+
+header ul > li {
+  display: inline-block;
+  margin: 25px 5px 0 0;
+  padding: 3px;
+  background: white;
+  border-radius: 4px;
+  /*スペース区切りで<水平方向の距離> <垂直方向の距離> <影のぼかし半径> <影の色>を指定*/
+  text-shadow: 0 1px 0 #fff;
+}
+
+header ul > li:first-child {
+  background: none;
+  color: white;
+}
+
+header ul > li > a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+header ul > li > a:hover {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+nav {
+  border-top: 1px solid #fff;
+  margin: 0 0px 10px 0;
+  border-radius: 0 0 5px 5px;
+  -webkit-background-size: 7px 7px;
+  -moz-background-size: 7px 7px;
+  background-size: 7px 7px;
+  background-color: #0a6b19;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(#08881c 50%, transparent 50%, transparent);
+  background-image: linear-gradient(#08881c 50%, transparent 50%, transparent);
+}
+
+nav ul > li > a{
+  color: white;
+}
+
+nav ul > li > a:hover{
+  opacity: 0.8;
+}
+
+div .eyecatch {
+  margin-bottom: 20px;
+}
+
+#main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 860px;
+}
+
+.row {
+  border-bottom: 1px dotted #ccc;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.row:last-child {
+  margin-top: 10px;
+  border: none;
+}
+
+.row h3 {
+  overflow: hidden;
+  margin: 5px 0 5px 0 ;
+  padding: 0 0 0 5px;
+  font-size: 20px;
+  border-left: 5px solid #ccc;
+}
+
+.left_img {
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.right_text{
+  float: left;
+  font-size: 15px;
+  margin-bottom: 0 0 15px 15px;
+}
+
+.right_text p{
+  width: 660px;
+  margin: 0 0 30px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 10px;
+  -webkit-background-size: 7px 7px;
+  -moz-background-size: 7px 7px;
+  background-size: 7px 7px;
+  background-color: #0a6b19;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(#08881c 50%, transparent 50%, transparent);
+  background-image: linear-gradient(#08881c 50%, transparent 50%, transparent);
+}
+
+footer p {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+#back-to-top {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+}
