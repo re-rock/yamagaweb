@@ -189,27 +189,12 @@ footer p {
   bottom: 5px;
 }
 
-/* * * * * * contact.html * * * * */
 
-#contact_frame {
+#frame {
   overflow: hidden;
 }
 
-#contact {
-  width: 700px;
-  float: left;
-}
-#contact h3 {
-  background: #08881c;
-  text-align: center;
-  color: white;
-  height: 50px;
-  margin: 5px 0 0 0;
-  padding: 10px 0 10px 10px;
-}
-
 #sidebar{
-  margin: 5px 0 0 0;
   float: right;
   width: 170px;
 }
@@ -234,7 +219,7 @@ footer p {
 #sidebar ul > li{
   width: 170px;
   border-bottom: 1px solid #aaa;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 #sidebar ul > li:hover {
@@ -256,9 +241,75 @@ div.form-group.col-md-5 {
 }
 
 div.form-group.col-md-9 {
-margin-right: 200px;
+  margin-right: 200px;
 }
 
 #contact button.btn.btn-primary {
   margin: 10px 0 25px 15px;
+}
+
+/* clear: both; を試す*/
+
+/* * * * * * contact.html * * * * */
+
+#contact {
+  width: 700px;
+  float: left;
+}
+
+#contact h3 {
+  background: #08881c;
+  text-align: center;
+  color: white;
+  height: 50px;
+  margin: 0 0 10px 0;
+  padding: 10px 0 10px 10px;
+}
+
+/* * * * * * club.html * * * * */
+
+#club_data {
+  width: 700px;
+  float: left;
+}
+
+div#club_eyecatch {
+  background: url('../img/club_data.jpg') no-repeat;
+  width: 700px;
+  height: 200px;
+  background-size: cover;
+  float: left;
+}
+
+#club_eyecatch img {
+  width: 700px;
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 700px;
+}
+
+#club_eyecatch h4 {
+  color: white;
+  font-weight: bold;
+  padding: 165px 0 0 5px;
+}
+
+iframe #stadium_map {
+  margin-top: 5px;
+}
+
+#ground_link {
+  color: green;
+}
+
+#table_title {
+  background: #08881c;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.table th {
+  width: 130px;
 }
