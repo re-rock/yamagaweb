@@ -34,7 +34,7 @@
 				<li role="presentation"><a href="#">
 					<i class="glyphicon glyphicon-duplicate"></i> ニュース</a>
 				</li>
-				<li role="presentation"><a href="#">
+				<li role="presentation"><a href="club.html">
 					<i class="glyphicon glyphicon-user"></i> クラブ</a>
 				</li>
 				<li role="presentation"><a href="#">
@@ -75,20 +75,43 @@
 					</thead>
 				</table>
 
-				<!-- - - - - クラブアウトライン - - - - - -->
-				<div id="club_outline">
-
-				</div>
-
-				<!-- - - - - 場所 - - - - - -->
-				<div id="club_place">
-
-				</div>
-
 				<!-- - - - - 選手 - - - - - -->
 				<div id="club_player">
 
-				</div>
+					<table class="table table-bordered table-condensed">
+						<thead>
+							<tr>
+								<tr><th id="table_title">選手</th></tr>
+
+								<th id="for_width" class="dothesort" data-type="integer">背番号<span class="arrow"> ▷                  </span></th>
+								<th class="dothesort" data-type="string">名前</th>
+							</tr>
+						</thead>
+						<tbody class="player_tbody">
+							<tr class="player">
+								<td class="number">3</td>
+								<td><a href="https://ja.wikipedia.org/wiki/%E7%94%B0%E4%B8%AD%E9%9A%BC%E7%A3%A8" data-toggle="tooltip" title="wikipedia" target="_blank">田中 隼磨 (DF) </a><span class="label label-primary">キャプテン</span></td>
+							</tr>
+							<tr class="player">
+								<td class="number">22</td>
+								<td><a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%93%E3%83%8A" data-toggle="tooltip" title="wikipedia" target="_blank">オビナ (FW)</a></td>
+							</tr>
+							<tr class="player">
+								<td class="number">8</td>
+								<td><a href="https://ja.wikipedia.org/wiki/%E5%89%8D%E7%94%B0%E7%9B%B4%E8%BC%9D" data-toggle="tooltip" title="wikipedia" target="_blank">前田 直輝 (MF)</a></td>
+							</tr>
+							<tr class="player">
+								<td class="number">8</td>
+								<td><a href="https://ja.wikipedia.org/wiki/%E5%B2%A9%E4%B8%8A%E7%A5%90%E4%B8%89" data-toggle="tooltip" title="wikipedia" target="_blank">岩上 祐三 (MF)</a></td>
+							</tr>
+							<tr class="player">
+								<td class="number">1</td>
+								<td><a href="https://ja.wikipedia.org/wiki/%E6%9D%91%E5%B1%B1%E6%99%BA%E5%BD%A6" data-toggle="tooltip" title="wikipedia" target="_blank">村山 智彦 (GK)</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div><!-- club_player -->
 
 			</div><!-- club_data -->
 
@@ -98,7 +121,7 @@
 				<ul>
 					<li><a href="index.html">TOP</a></li>
 					<li><a href="">ニュース</a></li>
-					<li><a href="">クラブ</a></li>
+					<li><a href="club.html">クラブ</a></li>
 					<li><a href="">チャント</a></li>
 					<li><a href="">掲示板</a></li>
 					<li><a href="contact.html">お問い合せ</a></li>
@@ -112,6 +135,67 @@
 		</footer>
 
 	</div><!-- container -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- JavaScript -->
+	<script>
+	$(function() {
+		////////選手テーブル並び替え処理/////////
+		var sortOrder = 1; // 1:昇順, -1:降順
+
+		$(".dothesort").click(function() {
+
+			var type = $(this).data("type");//string , integer
+			var col = $(this).index();// 0, 1, 2, ...
+
+			var $rows = $(".player");//行全体を取得
+
+			//行を並び替え（背番号で）
+			$rows.sort(function(a, b) {
+				return compare(a, b, type, col) * sortOrder;
+			});
+
+			//tbodyを並び替えされた行全体で入れ替え
+			$(".player_tbody").empty().append($rows);
+
+			//並び替えの種類をマークで表示
+			var arrow = sortOrder === 1 ? " ▲" : " ▼";
+			$(".dothesort > .arrow").text("");
+			$(this).find(".arrow").text(arrow);
+
+			//並び替えを反転
+			sortOrder *= -1;
+
+		});
+
+		function compare(a, b, type, col) {
+			var _a = $(a).find(".number").eq(col).text();
+			var _b = $(b).find(".number").eq(col).text();
+
+			if(type == "string") {
+				if(_a < _b){
+					return -1;
+				}
+				if(_a > _b){
+					return 1;
+				}
+				return 0;
+			}else {
+				_a *= 1; // *= 1は文字列から数値に変換
+				_b *= 1;
+				return _a - _b;
+			}
+		}
+
+		//tooltip
+		$("[data-toggle=tooltip]").tooltip();
+	});
+	</script>
+
+	<!-- LiveReload -->
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
