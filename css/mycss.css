@@ -303,13 +303,32 @@ iframe #stadium_map {
   color: green;
 }
 
+#ground_link:hover {
+  color: green;
+  text-decoration: none;
+}
+
 #table_title {
   background: #08881c;
   color: white;
   text-align: center;
   letter-spacing: 3px;
+  width: 150px;
 }
 
-.table th {
-  width: 130px;
+th#for_width.dothesort {
+  width: 150px;
+}
+
+.player a{
+  color: green;
+}
+
+.player a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+span.arrow:hover {
+cursor: pointer;
 }
