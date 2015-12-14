@@ -23,10 +23,9 @@ header {
   height: 60px;
   color: white;
   padding-left: 50px;
-  /*ストライプ*/
-  -webkit-background-size: 7px 7px;
-  -moz-background-size: 7px 7px;
-  background-size: 7px 7px;
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
   background-color: #0a6b19;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
   background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
@@ -97,9 +96,9 @@ nav {
   border-top: 1px solid #fff;
   margin: 0 0px 10px 0;
   border-radius: 0 0 5px 5px;
-  -webkit-background-size: 7px 7px;
-  -moz-background-size: 7px 7px;
-  background-size: 7px 7px;
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
   background-color: #0a6b19;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
   background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
@@ -167,9 +166,9 @@ footer {
   text-align: center;
   padding: 10px 0;
   margin-top: 10px;
-  -webkit-background-size: 7px 7px;
-  -moz-background-size: 7px 7px;
-  background-size: 7px 7px;
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
   background-color: #0a6b19;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
   background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
@@ -189,6 +188,10 @@ footer p {
   bottom: 5px;
 }
 
+#back-to-top > a{
+  color: green;
+  text-decoration: none;
+}
 
 #frame {
   overflow: hidden;
@@ -247,8 +250,6 @@ div.form-group.col-md-9 {
 #contact button.btn.btn-primary {
   margin: 10px 0 25px 15px;
 }
-
-/* clear: both; を試す*/
 
 /* * * * * * contact.html * * * * */
 
@@ -330,5 +331,114 @@ th#for_width.dothesort {
 }
 
 span.arrow:hover {
-cursor: pointer;
+  cursor: pointer;
+}
+
+/* * * * * * club.html * * * * */
+
+#chant_main {
+  width: 700px;
+  float: left;
+}
+
+div#chant_index {
+  width: 500px;
+  height: auto;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+#chant_main h3, #chant_index h4{
+  background: #08881c;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+  margin: 0 0 10px 0;
+  padding-top: 7px;
+  vertical-align: bottom;
+}
+
+#chant_index h4{
+  height: 30px;
+  width: 200px;
+  margin: 5px 0 10px 150px;
+  overflow: hidden;
+  float: left;
+  clear: both;
+  border-radius: 5px;
+}
+
+.index_close {
+  width: 70px;
+  height: 20px;
+  float: right;
+  text-align: right;
+  margin:10px 10px 0 0;
+}
+
+.index_close label {
+  cursor: pointer;
+  margin: 0;
+  background-color: #707070;
+  border-radius: 5px;
+  padding: 3px;
+  color: #fff;
+}
+
+input {
+  display: none;
+}
+
+div.panel {
+  background: #eee;
+  min-height: 40px;
+  margin: 0;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow:rgba(102, 102, 102, 0.498039) 2px 2px 0px 4px;
+}
+.panel_list {
+  clear: both;
+  list-style-type: none;
+  width: 200px;
+  margin: 0 0 0 150px;
+}
+
+.panel_list > li {
+  margin-top: 5px;
+}
+
+.panel_list > li > a {
+  text-decoration: none;
+  color: green;
+}
+
+.chant_title{
+  width: 30%;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #eee;
+  height: 30px;
+  border-bottom: green 1px solid ;
+  border-left: green 5px solid ;
+  padding: 5px 0 0 10px;
+  border-radius: 10px 10px 0 0;
+  margin-top: 40px;
+}
+
+div.embed-responsive.embed-responsive-16by9{
+  margin-left: 70px;
+}
+
+#chant_contents {
+  width: 600px;
+  margin-left: 50px;
+}
+
+#chant_contents p{
+  font-style: oblique;
+  text-align: center;
+  margin-top: 10px;
 }

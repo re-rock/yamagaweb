@@ -7,7 +7,6 @@
 	<title>YamagaDeGo! - クラブ情報</title>
 	<link rel="stylesheet" href="css/mycss.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-
 </head>
 <body>
 
@@ -49,11 +48,62 @@
 			</ul>
 		</nav>
 
-		<!-- - - - - アイキャッチ - - - - - -->
+		<!-- - - - - メイン - - - - - -->
 		<div id="frame">
-			<div id="club_chant">
+			<div id="chant_main">
+				<h3>チャントリスト</h3>
 
-			</div><!-- club_chant -->
+				<!-- 目次 -->
+				<div id="chant_index">
+					<h4>インデックス</h4>
+					<div class="index_close">
+						<label for="check">close</label>
+						<input id="check" type="checkbox">
+					</div>
+
+					<div class="panel">
+						<ul class="panel_list">
+							<li><a href="#alps">アルプス一万尺</a></li>
+							<li><a href="#m_football">信州松本Football</a></li>
+							<li><a href="#iloveyamaga">山雅が好きだから</a></li>
+						</ul>
+					</div>
+					<div style="clear-both;"></div>
+				</div><!-- chant_index -->
+
+				<!-- コンテンツ -->
+				<div id="chant_contents">
+					<div class="chant_title" id="alps"><i class="glyphicon glyphicon-music"></i> アルプス一万尺
+					</div>
+					<br><div class="embed-responsive embed-responsive-16by9" style="width:80%;">
+						<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/R7kk4_y2TAE?start=804"></iframe>
+					</div>
+					<p>勝利を信じてガンガン行こうぜ　山雅の勢いは止められない<br>
+						ラーラララララララ　ラーラララララララ<br>
+						ラーラララララララ　ラララララ
+					</p>
+
+					<div class="chant_title" id="m_football"><i class="glyphicon glyphicon-music"></i> 信州松本Football
+					</div>
+					<br><div class="embed-responsive embed-responsive-16by9" style="width:80%;">
+						<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/R7kk4_y2TAE?start=764&end=804"></iframe>
+					</div>
+					<p>今日もひとつになって　追い求めろ俺らと<br>
+						信州松本のFootballを　行け山雅
+					</p>
+
+					<div class="chant_title" id="iloveyamaga"><i class="glyphicon glyphicon-music"></i> 山雅が好きだから
+					</div>
+					<br><div class="embed-responsive embed-responsive-16by9" style="width:80%;">
+						<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/R7kk4_y2TAE?start=733&end=764"></iframe>
+					</div>
+					<p>どんな時でも　俺たちがここにいる<br>
+						愛をこめて叫ぶ　山雅が好きだから
+					</p>
+
+				</div><!-- chant_contents -->
+
+			</div><!-- chant_main -->
 
 			<!-- - - - - サイドバー - - - - - -->
 			<div id="sidebar">
@@ -74,6 +124,7 @@
 		<footer>
 			<p>©2016 YamagaDeGo.com All Right Reserved</p>
 		</footer>
+		<div id="back-to-top"><a href="#">Top</a></div>
 
 	</div><!-- container -->
 
@@ -84,11 +135,36 @@
 	<!-- JavaScript -->
 	<script>
 	$(function() {
+		//インデックスの非表示処理
+		$("#check").click(function(e) {
+			if($(this).prop("checked")){
+				$(".panel_list").addClass("hidden");
+				$(".index_close label").text("open");
+			}else {
+				$(".panel_list").removeClass("hidden");
+				$(".panel_list").addClass("show");
+				$(".index_close label").text("close");
+			}
+		});
 
+		//ページ最上部への移動処理
+		$("#back-to-top").hide();
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 60){
+				$("#back-to-top").fadeIn();
+			}else {
+				$("#back-to-top").fadeOut();
+			}
+		});
+		$("#back-to-top a").click(function(){
+			$("body").animate({scrollTop:0}, 100);
+			return false;
+		});
 	});
 	</script>
 
-	<!-- LiveReload -->
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+<!-- LiveReload -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
