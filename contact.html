@@ -62,19 +62,19 @@
 					<input type="hidden" name="_subject" value="お問い合せ">
 					<div class="form-group col-md-5">
 						<label for="InputName">お名前</label>
-						<input type="name" class="form-control" id="InputName" placeholder="name">
+						<input type="name" class="form-control" id="InputName" placeholder="name" required>
 					</div>
 					<div class="form-group col-md-5">
 						<label for="InputEmail1">メールアドレス</label>
-						<input type="email" class="form-control" id="InputEmail1" placeholder="Email">
+						<input type="email" class="form-control" id="InputEmail" placeholder="Email" required>
 					</div>
 					<div class="form-group col-md-5">
 						<label for="InputNumber">電話番号</label>
-						<input type="tel" class="form-control" id="InputNumber" placeholder="tel">
+						<input type="number" class="form-control" id="InputNumber" placeholder="tel" required>
 					</div>
 					<div class="form-group col-md-9">
 						<label for="InputInquiry">お問い合せ内容</label>
-						<textarea class="form-control" rows="6"></textarea>
+						<textarea class="form-control" rows="6" required></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">送信</button>
 				</form>
