@@ -23,14 +23,13 @@ header {
   height: 60px;
   color: white;
   padding-left: 50px;
-  -webkit-background-size: 4px 4px;
-  -moz-background-size: 4px 4px;
-  background-size: 4px 4px;
-  background-color: #0a6b19;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
-  background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
-  background-image: -o-linear-gradient(#08881c 50%, transparent 50%, transparent);
-  background-image: linear-gradient(#08881c 50%, transparent 50%, transparent);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 3px 3px;
+  background-color: #00693e;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #0e9430), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(#0e9430 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(#0e9430 50%, transparent 50%, transparent);
 }
 
 header img {
@@ -96,14 +95,8 @@ nav {
   border-top: 1px solid #fff;
   margin: 0 0px 10px 0;
   border-radius: 0 0 5px 5px;
-  -webkit-background-size: 4px 4px;
-  -moz-background-size: 4px 4px;
-  background-size: 4px 4px;
-  background-color: #0a6b19;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
-  background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
-  background-image: -o-linear-gradient(#08881c 50%, transparent 50%, transparent);
-  background-image: linear-gradient(#08881c 50%, transparent 50%, transparent);
+  background-color: #00693e;
+
 }
 
 nav ul > li > a{
@@ -167,13 +160,13 @@ footer {
   padding: 10px 0;
   margin-top: 10px;
   -webkit-background-size: 4px 4px;
-  -moz-background-size: 4px 4px;
-  background-size: 4px 4px;
-  background-color: #0a6b19;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #08881c), color-stop(.5, transparent), to(transparent));
-  background-image: -moz-linear-gradient(#08881c 50%, transparent 50%, transparent);
-  background-image: -o-linear-gradient(#08881c 50%, transparent 50%, transparent);
-  background-image: linear-gradient(#08881c 50%, transparent 50%, transparent);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 3px 3px;
+  background-color: #00693e;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, #0e9430), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(#0e9430 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(#0e9430 50%, transparent 50%, transparent);
 }
 
 footer p {
@@ -208,7 +201,7 @@ footer p {
   text-align: center;
   margin: 0 0 0 0;
   padding: 5px 0 5px 0;
-  background: #08881c;
+  background: #00693e;
   color: white;
 }
 
@@ -226,7 +219,7 @@ footer p {
 }
 
 #sidebar ul > li:hover {
-  background: #dfdbdb;
+  background: #eeeeee;
   opacity: 0.8;
   border-radius: 5px;
 }
@@ -259,7 +252,7 @@ div.form-group.col-md-9 {
 }
 
 #contact h3 {
-  background: #08881c;
+  background: #00693e;
   text-align: center;
   color: white;
   height: 50px;
@@ -310,7 +303,7 @@ iframe #stadium_map {
 }
 
 #table_title {
-  background: #08881c;
+  background: #00693e;
   color: white;
   text-align: center;
   letter-spacing: 3px;
@@ -349,7 +342,7 @@ div#chant_index {
 }
 
 #chant_main h3, #chant_index h4{
-  background: #08881c;
+  background: #00693e;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -441,4 +434,62 @@ div.embed-responsive.embed-responsive-16by9{
   font-style: oblique;
   text-align: center;
   margin-top: 10px;
+}
+
+/* * * * * * news.html * * * * * * */
+#nwes {
+  width: 700px;
+  float: left;
+}
+
+div.panel{
+  margin-top: 2px;
+}
+
+#news {
+  float: left;
+  width: 690px;
+  margin: 0 0 10px 10px;
+}
+
+.list-group-item > span {
+  background-color: #00693e;
+}
+
+.list-group-item:hover {
+  opacity: 0.7;
+  background-color: #dddddd;
+}
+
+div.panel-heading {
+  font-weight: bold;
+  font-family: serif;
+  margin-bottom: 5px;
+}
+
+.list-group > a {
+  color: black;
+}
+
+.list-group > a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.panel-footer nav {
+  width: 670px;
+  height: 40px;
+  background-color: #eeeeee;
+  margin: 0;
+}
+div.panel-footer {
+  margin-top: 10px;
+  padding: 0 0 20px 0;
+  text-align: center;
+  height: 40px;
+  line-height: 50px;
+}
+
+ul.pagination {
+  margin-top: 8px;
 }
